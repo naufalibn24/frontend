@@ -1,0 +1,118 @@
+<div class="mt-5">
+  <section id="users">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <h4>Checkout</h4>
+            </div>
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th>No Barang</th>
+                  <th>Gambar Barang</th>
+                  <th>Nama Barang</th>
+                  <th>Jumlah Barang</th>
+                  <th>Harga Barang</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let checkout of checkouts">
+                  <td>{{ checkout.Id_Pesanan }}</td>
+                  <td>
+                    <img src="{{ checkout.Gambar }}" width="50" height="50" />
+                  </td>
+                  <td>{{ checkout.Nama_Produk }}</td>
+                  <td>{{ checkout.Jumlah }}</td>
+                  <td>{{ checkout.Harga_Produk }}</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Total Harga Barang</td>
+                  <td>{{ totals }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="card-body">
+                  <form action="index.html">
+                    <div class="form-group">
+                      <label for="email">Kecamatan</label>
+                      <input name="kecamatan" type="text" class="form-control" [(ngModel)]="alamat.kecamatan" />
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Kabupaten</label>
+                      <input name="kabupaten" type="text" class="form-control" [(ngModel)]="alamat.kabupaten" />
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Desa</label>
+                      <input name="desa" type="text" class="form-control" [(ngModel)]="alamat.desa" />
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Provinsi</label>
+                      <input name="provinsi" type="text" class="form-control" [(ngModel)]="alamat.provinsi" />
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Negara</label>
+                      <input name="negara" type="text" class="form-control" [(ngModel)]="alamat.negara" />
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Kode Pos</label>
+                      <input name="Kodepos" type="text" class="form-control" [(ngModel)]="alamat.Kodepos" />
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Handphone</label>
+                      <input name="Nomorhp" type="text" class="form-control" [(ngModel)]="alamat.Nomorhp" />
+                    </div>
+                    <input
+                      type="submit"
+                      value="Kirim Alamat"
+                      (click)="postAlamat()"
+                      class="btn btn-primary btn-block"
+                    />
+                  </form>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card-body" style="width: 18rem">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      Kecamatan: <Span style="color: green">{{ alamats.kecamatan }}</Span>
+                    </li>
+                    <li class="list-group-item">
+                      Kabupaten: <Span style="color: green">{{ alamats.kabupaten }}</Span>
+                    </li>
+                    <li class="list-group-item">
+                      Desa: <Span style="color: green">{{ alamats.desa }}</Span>
+                    </li>
+                    <li class="list-group-item">
+                      Provinsi: <Span style="color: green">{{ alamats.provinsi }}</Span>
+                    </li>
+                    <li class="list-group-item">
+                      Negara: <Span style="color: green">{{ alamats.negara }}</Span>
+                    </li>
+                    <li class="list-group-item">
+                      Kode Pos: <Span style="color: green">{{ alamats.Kodepos }}</Span>
+                    </li>
+                    <li class="list-group-item">
+                      Handphone: <Span style="color: green">{{ alamats.Nomorhp }}</Span>
+                    </li>
+                    <!-- <li class="list-group-item">ID User:</li> -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

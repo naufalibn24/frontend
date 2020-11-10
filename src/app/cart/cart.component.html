@@ -1,0 +1,55 @@
+<div>
+  <header id="main-header" class="py-2 bg-success text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1><i class="fas fa-shopping-cart"></i> Cart</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="categories">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <h4>Detail Cart</h4>
+            </div>
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th>No.Produk</th>
+                  <th>Nama Produk</th>
+                  <th>Jumlah Produk</th>
+                  <th>Harga</th>
+                  <th>Checkout</th>
+                  <th>Hapus</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let cart of carts">
+                  <td>{{ cart._id }}</td>
+                  <td>{{ cart.Nama_Produk }}</td>
+                  <td>
+                    <input type="number" name="Jumlah" style="width: 50" [(ngModel)]="Jumlah" />
+                  </td>
+                  <td>{{ cart.Harga }}</td>
+                  <td>
+                    <a class="btn btn-primary" (click)="postToCheckout(cart, Jumlah)">
+                      <i class="fas fa-angle-double-right"></i> Checkout
+                    </a>
+                  </td>
+                  <td>
+                    <a class="btn btn-danger" (click)="deleteCart(cart)"> <i class="fas fa-trash-alt"></i> Hapus </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
