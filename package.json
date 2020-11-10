@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "npm run env -s && ng build --prod",
-    "start": "npm run env -s && ng serve --proxy-config proxy.conf.js",
+    "start": "node server.js",
     "lint": "ng lint && stylelint \"src/**/*.scss\" --syntax scss && htmlhint \"src\" --config .htmlhintrc",
     "test": "npm run env -s && ng test",
     "test:ci": "npm run env -s && npm run lint -s && ng test --configuration=ci",
@@ -14,7 +14,7 @@
     "env": "ngx-scripts env npm_package_version",
     "prettier": "prettier --write \"./{src,e2e}/**/*.{ts,js,html,scss}\"",
     "prettier:check": "prettier --list-different \"./{src,e2e}/**/*.{ts,js,html,scss}\"",
-    "postinstall": "npm run prettier -s",
+    "postinstall": "ng build --aot --prod",
     "generate": "ng generate"
   },
   "dependencies": {
@@ -33,6 +33,7 @@
     "@ngx-translate/core": "^13.0.0",
     "bootstrap": "^4.5.2",
     "date-fns": "^2.16.0",
+    "express": "^4.17.1",
     "jw-angular-pagination": "^1.2.0",
     "lodash": "^4.17.20",
     "moment": "^2.27.0",
@@ -98,5 +99,9 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "engines": {
+    "node": "14.4.0",
+    "npm": "6.14.5"
   }
 }
