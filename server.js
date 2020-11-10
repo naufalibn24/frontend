@@ -28,7 +28,7 @@ app.all('*', function (req, res) {
 });
 
 // ---- START UP THE NODE SERVER  ----
-app.listen(_port, function () {
+app.listen(process.env.PORT || _port, function () {
   console.log(
     'Node Express server for ' +
       app.name +
