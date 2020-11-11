@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 const routes = {
-  users: (id: any) => `http://localhost:3000/api/user/` + id,
+  users: (id: any) => `https://backends-petrus.herokuapp.com/api/user/` + id,
 };
 
 export interface RandomQuoteContext {

@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 const routes = {
-  register: () => `http://localhost:3000/api/user/register`,
+  register: () => `https://backends-petrus.herokuapp.com/api/user/register`,
 };
 
 @Injectable({

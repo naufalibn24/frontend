@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 const routes = {
-  detail: (id: any) => `http://localhost:3000/api/produk/` + id,
+  detail: (id: any) => `https://backends-petrus.herokuapp.com/api/produk/` + id,
 };
 
 @Injectable({
