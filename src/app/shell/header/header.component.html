@@ -1,6 +1,11 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="http://localhost:4200/home" translate>APP_NAME</a>
+    <a
+      class="navbar-brand"
+      href="https://backends-petrus.herokuapp.com/home"
+      translate
+      >APP_NAME</a
+    >
     <button
       class="navbar-toggler"
       type="button"
@@ -11,9 +16,17 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div id="navbar-menu" class="collapse navbar-collapse float-xs-none" [ngbCollapse]="menuHidden">
+    <div
+      id="navbar-menu"
+      class="collapse navbar-collapse float-xs-none"
+      [ngbCollapse]="menuHidden"
+    >
       <div class="navbar-nav">
-        <a class="nav-item nav-link text-uppercase" routerLink="/home" routerLinkActive="active">
+        <a
+          class="nav-item nav-link text-uppercase"
+          routerLink="/home"
+          routerLinkActive="active"
+        >
           <i class="fas fa-home"></i>
           <span translate>Home</span>
         </a>
@@ -30,9 +43,12 @@
             JENIS IKAN
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" routerLink="/produk/{{ kategori._id }}" *ngFor="let kategori of kategories">{{
-              kategori.kategori
-            }}</a>
+            <a
+              class="dropdown-item"
+              routerLink="/produk/{{ kategori._id }}"
+              *ngFor="let kategori of kategories"
+              >{{ kategori.kategori }}</a
+            >
           </div>
         </li>
       </div>
@@ -50,16 +66,29 @@
             AKUN
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" routerLink="/profile" routerLinkActive="active">Profile</a>
+            <a
+              class="dropdown-item"
+              routerLink="/profile"
+              routerLinkActive="active"
+              >Profile</a
+            >
             <a class="dropdown-item" (click)="logOut()">Logout</a>
           </div>
         </li>
 
-        <a class="nav-item nav-link text-uppercase" routerLink="/cart" routerLinkActive="active">
+        <a
+          class="nav-item nav-link text-uppercase"
+          routerLink="/cart"
+          routerLinkActive="active"
+        >
           <i class="fas fa-shopping-cart" width="30" height="30" alt=""></i>
           <span translate>Cart</span>
         </a>
-        <a class="nav-item nav-link text-uppercase" routerLink="/login" routerLinkActive="active">
+        <a
+          class="nav-item nav-link text-uppercase"
+          routerLink="/login"
+          routerLinkActive="active"
+        >
           <i class="fas fa-question-circle"></i>
           <span translate>Login</span>
           <!-- <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon> -->
