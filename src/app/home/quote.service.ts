@@ -4,9 +4,9 @@ import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 const routes = {
-  quote: () => 'https://backends-petrus.herokuapp.com/api/produk',
-  sell: (id: any) => `https://backends-petrus.herokuapp.com/api/pesanan/` + id,
-  carousell: () => 'https://backends-petrus.herokuapp.com/api/carousell',
+  quote: () => 'http://localhost:3000/api/produk',
+  sell: (id: any) => `http://localhost:3000/api/pesanan/` + id,
+  carousell: () => 'http://localhost:3000/api/carousell',
 };
 
 const httpOptions = {

@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 const routes = {
-  kategori: () => `https://backends-petrus.herokuapp.com/api/kategori/`,
+  kategori: () => `http://localhost:3000/api/kategori/`,
 };
 
 @Injectable({

@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 const routes = {
-  register: () => `https://backends-petrus.herokuapp.com/api/user/register`,
+  register: () => `http://localhost:3000/api/user/register`,
 };
 
 @Injectable({
@@ -14,6 +14,7 @@ export class RegisterService {
   constructor(private httpClient: HttpClient) {}
 
   postRegister(data: any): Observable<string> {
+    console.log(data);
     return this.httpClient.post(routes.register(), data).pipe(
       map((body: any) => body),
       catchError(() => of('Error, could not load joke :-('))

@@ -4,8 +4,8 @@ import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 const routes = {
-  url: (id: any) => `https://backends-petrus.herokuapp.com/api/produks/` + id,
-  urlId: (id: any) => `https://backends-petrus.herokuapp.com/api/produk/` + id,
+  url: (id: any) => `http://localhost:3000/api/produks/` + id,
+  urlId: (id: any) => `http://localhost:3000/api/produk/` + id,
 };
 
 @Injectable({

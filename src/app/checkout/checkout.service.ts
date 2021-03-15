@@ -4,11 +4,10 @@ import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 const routes = {
-  get: (id: any) => `https://backends-petrus.herokuapp.com/api/detail/` + id,
-  post: () => `https://backends-petrus.herokuapp.com/api/alamats`,
-  getAlamat: (id: any) =>
-    `https://backends-petrus.herokuapp.com/api/alamat/` + id,
-  put: (id: any) => `https://backends-petrus.herokuapp.com/api/details/` + id,
+  get: (id: any) => `http://localhost:3000/api/detail/` + id,
+  post: () => `http://localhost:3000/api/alamats`,
+  getAlamat: (id: any) => `http://localhost:3000/api/alamat/` + id,
+  put: (id: any) => `http://localhost:3000/api/details/` + id,
 };
 
 @Injectable({
